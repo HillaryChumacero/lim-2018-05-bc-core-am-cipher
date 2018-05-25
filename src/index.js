@@ -1,16 +1,3 @@
-//BOTON CONTINUAR
-// const btnContinuar= document.getElementById("btnContinuar");
-// btnContinuar.addEventListener("click", mostrar);
-// function mostrar(){
-// const hid = document.getElementById("principal"); 
-// const x= document.getElementById('root');
-// if(x.style.display==="block"){
-//     x.style.display="none";
-// } else{
-//     x.style.display="block";
-//     hid.style.display="none";
-// }
-// }
 
 //BOTON CANCELAR
 const btnCancelar = document.getElementById("btnCancelar");
@@ -45,6 +32,10 @@ btnCifrar.addEventListener("click", cont_encode);
     }
   }
 
+//BUTTON CIFRAR-TEXTO
+const btnCifrarTexto = document.getElementById("btnCifrarTexto");
+btnCifrarTexto.addEventListener("click",result);
+
 //BOTON DESCIFRAR
 const btnDescifrar = document.getElementById("btnDescifrar");
 btnDescifrar.addEventListener("click", cont_decode);
@@ -57,12 +48,8 @@ if(z.style.display==="block"){
 } else{
     z.style.display="block";
     hid.style.display="none";
-    document.getElementById("text_descif").value = "";
+  document.getElementById("text_descif").value = "";
 }}
-
-//BUTTON CIFRAR-TEXTO
-const btnCifrarTexto = document.getElementById("btnCifrarTexto");
-btnCifrarTexto.addEventListener("click",result);
 
 //BUTTON DESCIFRAR-TEXTO
 const btnDescifrarTexto = document.getElementById("btnDescifrarTexto");
@@ -70,14 +57,23 @@ btnDescifrarTexto.addEventListener("click",result);
 
 //RESULTADO
 function result(){
+  debugger
 const hid = document.getElementById("container-back-decode");
 const hid2 = document.getElementById("container-back-encode");
 const res= document.getElementById('container-result');
 const text_cif= document.getElementById('text_cif');
 const text_result = document.getElementById('text_salida');
+document.getElementById("text_salida").value = "";
 //
 var offset = document.getElementById("offset");
 var resultadotext= "";
+function encode(){ debugger
+  text_cif= text_cif.value.toUpperCase();
+  for(var i=0; i<text_cif.length; i++){
+    resultadotext += String.fromCharCode((text_cif.CharCodeAt(i) - 65 + parseInt(offset.value)) %26 +65);
+    document.getElementById("text_salida").value = resultadotext;
+  }
+}
 
 if(res.style.display==="block"){
   res.style.display="none";
@@ -85,17 +81,11 @@ if(res.style.display==="block"){
   res.style.display="block";
  hid.style.display="none";
  hid2.style.display="none";
- document.getElementById("text_salida").value = "";
+//  document.getElementById("text_salida").value = "";
 
-}function encode(){ debugger
-    text_cif= text_cif.value.toUpperCase();
-    for(var i=0; i<text_cif.length; i++){
-      resultadotext += String.fromCharCode((text_cif.CharCodeAt(i) - 65 + parseInt(offset.value)) %26 +65);
-      document.getElementById("text_salida").value = resultadotext;
-    }
-  }
 }
-
+}
+console.log(result);
 
 
 
