@@ -2,72 +2,155 @@
 @import url(https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Tillana);
 @import url(https://fonts.googleapis.com/css?family=Orbitron);
 @import url(https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple);
-body{
-  padding: 50px;
-  font-family: monospace;
-  text-align: center;
-  /* background: url(http://s1.picswalls.com/wallpapers/2014/06/22/robot-hd-wallpaper_1053401_45.jpg); */
-  background: url(https://wallpaper-house.com/data/out/7/wallpaper2you_188521.jpg);
-  background-size: 100%;
-  color:rgb(232, 248, 247);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-size: 20px;
-  
-}
-h1{
-    font-size: 60px;
-    text-align: center;
-    margin-bottom: 50px;
-    font-family: 'Libre Barcode 39 Text', cursive;
-    font-family: 'Tillana', cursive;
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 
-}
-
-h2{
-    font-family: 'Orbitron', sans-serif;
-    font-size: 50px;;
-}
-form{
-    
-    width:500px;
-    border: 1px solid #4e4d4d;
-    border-radius: 3px;
-    -moz-border-radius:3px;
-    -webkit-border-radius:3px;
-    box-shadow: inset 0 0 10px #000;
-    margin: 100px auto;
-    font-size: 20px;
-  
-}
-.button {
-    border: none;
-    background: #3a7999;
-    color: #f2f2f2;
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 5px;
-    position: relative;
-    box-sizing: border-box;
-    transition: all 500ms ease;
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 20px;
+      background-image: url(images/robot_glass.jpg) ;
+      /* background: #4fa5c7ea; */
+      background-size: 100%;
+      color: #fffaec;    
+      text-align: center;
+      background-attachment: fixed;
+      
     }
-    .button:hover {
-        background: rgba(0,0,0,0);
-        color: #3a7999;
-        box-shadow: inset 0 0 0 3px #3a7999;
-        }
-/* .button:hover {
-    background: rgba(0,0,0,0);
-    color: #3a7999;
-    box-shadow: inset 0 0 0 3px #3a7999; */
+  header{
+      width: 100%;
+      position: fixed; /*pegado en pantalla*/
+      display: flex;
+      flex-wrap: wrap;
+      /* justify-content: space-between; */
+      top: 0;
+      left: 0;
+      z-index: 100; /*se superpone, cubre a otro menor*/
+      overflow: hidden; /*desplazar hacia izq o derecha, impide error*/
+      background: rgba(226, 176, 12, 0.993);
+      margin-bottom: 20px; /**/
+      font-family: 'Libre Barcode 39 Text', cursive;
+      font-family: 'Tillana', cursive;
+      text-align: center;
+      color: #f5f7f8;
+  }
 
-/*
-div{
- position: relative;
+  .root{
+      /* border: 1px solid blue; */
+      width: 94%;
+      margin: 15% 3%;
+      background:transparent;
+      display:flex;
+      flex-wrap:wrap;
+  }
+  .text_square{
+      float: left;
+      width: 30%;
+      margin: 5% 3% 5% 0%;
+      height: 50%;
+      text-align: justify;
+      font-size: 18px;
+  }
+  .text_square h3{
+      text-align: center;
+  }
+  .square-button{
+      float: right;
+      width: 45%;
+      margin: 8% 3% 5% 19%;
+      height: 50%;
+      float: right;
+  }
+ 
+  form{
+      
+      width:50%;
+      border: 1px solid #4e4d4d;
+      border-radius: 3px;
+      -moz-border-radius:3px;
+      -webkit-border-radius:3px;
+      box-shadow: inset 0 0 10px #000;
+      margin: 100px auto;
+      font-size: 20px;
+      padding-top: 100px;
+      margin-top: 150px;
+      margin-bottom: 100px;
+      background: rgba(102, 89, 45, 0.308);
+     
+  }
+  /* form h2{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 35px;
+    width: 50%;
+  } */
+  .text{
+      width:80%;
+      height:100px;
+      margin: 50px auto;
+      border: 2px solid #647072;
+      /* background: #f2f2f2; */
+      background: rgba(237, 254, 255, 0.685);
+      font-size: 15px;
+      
+      /* text-transform: uppercase; */
+  }
+  .text_result{
+      width:80%;
+      height:100px;
+      margin: 50px auto;
+      border: 2px solid #647072;
+      background: rgba(237, 254, 255, 0.685);
+      color: #000;
+      text-align: center;
+      font-size: 15px;
+  }
+  .button {
+      border: none;
+      background: #0496cf;
+      color: #f2f2f2;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      position: relative;
+      box-sizing: border-box;
+      transition: all 500ms ease;
+      cursor: pointer;
+      cursor: hand;
+      font-family: 'Josefin Sans', sans-serif;
+  
+      }
+      .button:hover {
+          background: #ffffff;
+          color: #1f6797;
+          box-shadow: inset 0 0 0 3px #dfa810;
+          }
+footer{
+    width: 100%;
+    position: fixed; /*pegado en pantalla*/
+    background-color: rgba(95, 71, 26, 0.842);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    
 }
-form form-offset{
-    float: left;
-}
-form form-text_cif{
-    float: left;
-}*/
+  .oculto{
+      display: none;
+  }
+  /* .button:hover {
+      background: rgba(0,0,0,0);
+      color: #3a7999;
+      box-shadow: inset 0 0 0 3px #3a7999; */
+  
+  /*
+  div{
+   position: relative;
+  }
+  form form-offset{
+      float: left;
+  }
+  form form-text_cif{
+      float: left;
+  }*/

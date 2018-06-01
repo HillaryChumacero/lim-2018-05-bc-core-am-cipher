@@ -1,126 +1,144 @@
+const btnContinue = document.getElementById("btnContinue");
+btnContinue.addEventListener("click",() => {
+  const hidden = document.getElementById("root");
+  const show = document.getElementById("sec_cipher");
+  hidden.style.display = "none";
+  show.style.display = "block";
+});
 
-//BOTON CANCELAR
-const btnCancelar = document.getElementById("btnCancelar");
-btnCancelar.addEventListener("click", cancel); //()=> // function(){}
-function cancel(){ debugger
-  const hid = document.getElementById("root");
-    const y= document.getElementById('container-back-encode');
-    if(y.style.display==="block"){
-        y.style.display="none";
-     }// else{
-    //     y.style.display="block";
-    //     hid.style.display="none";
-          
-    }
-    console.log(cancel); ///HEREEEEEE
+/********************/
+document.getElementById("btnCifrarTexto").addEventListener("click", () =>{
+  let string = document.getElementById("text_cip").value;
+  let offset = parseInt(document.getElementById("offset").value);
+  let text_result = document.getElementById("text_result");
+text_result.innerHTML = cipher.encode(offset, string);
+});
+/********************/
+document.getElementById("btnDecifrarTexto").addEventListener("click", () =>{
+  let string = document.getElementById("text_cip").value;
+  let offset = parseInt(document.getElementById("offset").value);
+  let text_result = document.getElementById("text_result");
+  text_result.innerHTML = cipher.decode(offset, string);
+});
 
 
-//BOTON CIFRAR
-const btnCifrar = document.getElementById("btnCifrar");
-btnCifrar.addEventListener("click", cont_encode);
-    function cont_encode() { debugger
-    const hid = document.getElementById("root");
-    const y= document.getElementById('container-back-encode');
-    const text_cif= document.getElementById('text_cif');
-    if(y.style.display==="block"){
-        y.style.display="none";
-    } else{
-        y.style.display="block";
-        hid.style.display="none";
-        document.getElementById("text_cif").value = "";
-          
-    }
-  }
 
+
+
+
+
+
+
+
+
+
+
+// document.getElementById("btnCifrarTexto").addEventListener("click", () =>{
+//   const string = document.getElementById("string").value;
+//   const offset = parseInt(document.getElementById("offset").value);
+//   const text_result = document.getElementById("text_result");
+// text_result.innerHTML = cipher.encode(offset, string);
+// });
+// /********************/
+// document.getElementById("btnDecifrarTexto").addEventListener("click", () =>{
+//   const string = document.getElementById("string").value;
+//   const offset = parseInt(document.getElementById("offset").value);
+//   const text_result = document.getElementById("text_result");
+//   text_result.innerHTML = cipher.decode(offset, string);
+// });
+
+/********************/
+//BOTON COPIAR TEXTO
+document.getElementById("btnCopyText").addEventListener("click", () => {
+  const x = document.createElement("input");
+  x.setAttribute("value", document.getElementById("text_result").innerHTML);
+  document.body.appendChild(x);
+  x.select();
+  document.execCommand("copy");
+  document.body.removeChild(x);
+})
+
+/********************/
 //BUTTON CIFRAR-TEXTO
-const btnCifrarTexto = document.getElementById("btnCifrarTexto");
-btnCifrarTexto.addEventListener("click",result);
+// const btnCifrarTexto = document.getElementById("btnCifrarTexto");
+// btnCifrarTexto.addEventListener("click",resultCifrarTexto);
+// function resultCifrarTexto(){ debugger
+// const ocultocif =    document.getElementById("container-back-encode");
+// const ocultodescif = document.getElementById("container-back-decode");
+// const muestra=       document.getElementById('container-result');
 
-//BOTON DESCIFRAR
-const btnDescifrar = document.getElementById("btnDescifrar");
-btnDescifrar.addEventListener("click", cont_decode);
-function cont_decode(){
-const hid = document.getElementById("root");
-const z= document.getElementById('container-back-decode');
-const text_cif= document.getElementById('text_descif');
-if(z.style.display==="block"){
-    z.style.display="none";
-} else{
-    z.style.display="block";
-    hid.style.display="none";
-  document.getElementById("text_descif").value = "";
-}}
+// muestra.style.display = "block";
+// ocultocif.style.display="none";
+// ocultodescif.style.display="none";
 
-//BUTTON DESCIFRAR-TEXTO
-const btnDescifrarTexto = document.getElementById("btnDescifrarTexto");
-btnDescifrarTexto.addEventListener("click",result);
+// var Numero= document.getElementById('offset').value;
+// var Text= document.getElementById('text_cif').value;
 
-//RESULTADO
-function result(){
-  debugger
-const hid = document.getElementById("container-back-decode");
-const hid2 = document.getElementById("container-back-encode");
-const res= document.getElementById('container-result');
-const text_cif= document.getElementById('text_cif');
-const text_result = document.getElementById('text_salida');
-document.getElementById("text_salida").value = "";
-//
-var offset = document.getElementById("offset");
-var resultadotext= "";
-function encode(){ debugger
-  text_cif= text_cif.value.toUpperCase();
-  for(var i=0; i<text_cif.length; i++){
-    resultadotext += String.fromCharCode((text_cif.CharCodeAt(i) - 65 + parseInt(offset.value)) %26 +65);
-    document.getElementById("text_salida").value = resultadotext;
-  }
-}
+// alert(""+Numero);
+// alert(""+Text);
 
-if(res.style.display==="block"){
-  res.style.display="none";
-} else{
-  res.style.display="block";
- hid.style.display="none";
- hid2.style.display="none";
-//  document.getElementById("text_salida").value = "";
+// var respuesta = encode(Text);
+// alert(respuesta);
 
-}
-}
-console.log(result);
-
-
-
-  function decode(){
-    for (var i =0; i<text_cif.length; i++){
-        resultadotext += String.fromCharCode((text_cif.CharCodeAt(i) - 65 - offset) %26 + 65);
-      document.getElementById("text_salida").value = resultadotext;
-    }
-  }
-
-// function prueba()
-// {
-// var campo=document.getElementById("dato").value;
- 
-// var prueba=document.getElementById("prueba");
-// switch (campo) {
-// case 'rojo': prueba.style.background="red";
-// break;
-// case 'verde':prueba.style.background="green";
-// break;
-// case 'azul':prueba.style.background="blue";
- 
-// }
 // }
 
-// function continuar(){
-//     alert('AContinuemos, '+usuario+'!');
-//     var x=document.getElementById('welcome');
-//         if(x.style.display==="block"){
-//            x.style.display="none";
-//                }
-//       else {
-//     x.style.display="block";
-//            }
+
+
+// //BUTTON DESCIFRAR-TEXTO
+// const btnDescifrarTexto = document.getElementById("btnDescifrarTexto");
+// btnDescifrarTexto.addEventListener("click",resultDescifrarTexto);
+// function resultDescifrarTexto(){ debugger
+// const ocultocif =    document.getElementById("container-back-encode");
+// const ocultodescif = document.getElementById("container-back-decode");
+// const muestra=       document.getElementById('container-result');
+
+// muestra.style.display = "block";
+// ocultocif.style.display="none";
+// ocultodescif.style.display="none";
+
+// var Numero=       document.getElementById('offset').value;
+// var Text=       document.getElementById('text_descif').value;
+
+// alert(""+Numero);
+// alert(""+Text);
+
+// var respuesta = decode(Text);
+// alert(respuesta);
+
+// }
+// //RESULTADO
+
+
+// /////
+//   var offset = document.getElementById("offset");
+//   var resultadotext= "";
+
+// function encode(texto){ 
+//   var resultadotext="";
+//   for(var i=0; i< texto.length; i++){
+//     resultadotext += texto.charCodeAt(i)+" ";
 //   }
-//    //////para ocultar y mostrar un div
-// <a href="#" onclick="ocultar()">Oculta la capa 1</a>
-//     <a href="#" onclick="mostrar()">Muestra la capa 1</a>
+//   return resultadotext.trim();
+// }
+
+// function decode(texto){
+//   var textosplit=texto.split(" ");
+//   var temp = new Array();
+//   temp = textosplit(" ");
+
+//   for (a in temp ) {
+//     temp[a] = parseInt(temp[a], 10); 
+//   }
+
+//   for(var i=0; i< temp.length; i++){
+//     resultadotext += texto.charCodeAt(i)+" ";
+//   }
+//   var resultadotext = String.fromCharCode(textosplit);
+//   return resultadotext.trim();
+
+// }
+// // let string, offset;
+
+// //    //////para ocultar y mostrar un div
+// // <a href="#" onclick="ocultar()">Oculta la capa 1</a>
+// //     <a href="#" onclick="mostrar()">Muestra la capa 1</a>

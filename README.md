@@ -1,4 +1,4 @@
-# Cifrado César
+# CAESAR CIPHER
 
 ## Preámbulo
 
@@ -13,7 +13,16 @@ crear una aplicación que te permita enviar mensajes cifrados y que las demás
 personas (partícipes de la fiesta) puedan tener una interfaz para
 descifrarlo. Así que ahora te toca aplicar tus superpoderes 😎
 
-## Introducción
+## Principales usuarios
+
+## Objetivos
+El objetivo de la página es cifrar o descifrar el texto ingresado, dependiendo de lo que requiera el usuario.
+
+## Resolución de problemas
+![Con titulo](flujograma_cipher_cesar/.jpg "Flujograma")
+![Con titulo](Tabla kanban/.jpg "Tablero Kanban")
+
+## Más acerca del Cifrado Cesar
 
 El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher) es uno de los
 primeros métodos de cifrado conocidos históricamente. Es un tipo de cifrado por
@@ -37,7 +46,7 @@ pero el cifrado César muchas veces puede formar parte de sistemas más complejo
 de codificación, como el cifrado Vigenère, e incluso tiene aplicación en el
 sistema ROT13.
 
-## Objetivos
+<!-- ## Objetivos
 
 El objetivo principal de aprendizaje de este proyecto es tener tu primera
 experiencia construyendo una aplicación web usando tus conocimientos de **User
@@ -190,64 +199,6 @@ interfaz será desplegada usando GitHub pages.
 Te aconsejamos revisar [la rúbrica](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkQy1waRpQ-16sn7VogiDTy-Fz5e7OSZSYUCiHC_bkLAKYewr4L8pWJ_BG210PeULe-TjLScNQQT_x/pubhtml#)
 para ver la descripción detallada de cada _habilidad_ y cada _nivel_.
 
-### General
-
-| Característica/Habilidad | Nivel esperado |
-|--------------------------|----------------|
-| Completitud | 3
-| Investigación | 3
-| Documentación | 2
-
-### Tech
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| **JavaScript** | |
-| Estilo | 2
-| Nomenclatura/semántica | 2
-| Funciones/modularidad | 1
-| Estructuras de datos | 0
-| Tests | 2
-| **HTML** | |
-| Validación | 2
-| Estilo | 3
-| Semántica | 2
-| SEO | 0
-| **CSS** | |
-| DRY | 2
-| Responsive | 2
-| **SCM** | |
-| Git | 1
-| GitHub | 2
-| **CS** | |
-| Lógica | 1
-| Arquitectura | 1
-| Patrones/paradigmas | 0
-
-### UX
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| User Centricity | 2 |
-
-### Habilidades Blandas
-
-Para este reto queremos que intentes llegar al nivel 2 por lo menos en 5 de tus
-habilidades blandas y que tengas el nivel 1 en sólo 3 habilidades.
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| Planificación y organización | 2
-| Autoaprendizaje | 2
-| Solución de problemas | 2
-| Dar y recibir feedback | 2
-| Adaptabilidad | 2
-| Trabajo en equipo | 1
-| Comunicación eficaz | 1
-| Presentaciones | 1
-
-***
-
 ## Puntos de experiencia
 
 Este proyecto en el bootcamp te otorgará 100 XP (Puntos de experiencia).
@@ -277,46 +228,5 @@ Este proyecto en el bootcamp te otorgará 100 XP (Puntos de experiencia).
    pruebas unitarias (unit tests) con el comando `npm test`.
 7. A codear se ha dicho! :rocket:
 
-***
+*** -->
 
-## Tips / Pistas
-
-A continuación un video de Michelle que te lleva a través de la fórmula
-matemática del Cifrado César y un par de cosas más que debes saber para
-resolver este proyecto. ¡Escúchala con detenimiento y sigue sus consejos! :)
-
-[![tips caesar cipher](https://img.youtube.com/vi/zd8eVrXhs7Y/0.jpg)](https://www.youtube.com/watch?v=zd8eVrXhs7Y)
-
-También te compartimos más información de lo que Michelle te ha explicado en el
-video anterior:
-
-* [Aprende más sobre `charCodeAt()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/charCodeAt)
-* [Aprende más sobre `String.fromCharCode()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/fromCharCode)
-* [Aprende más sobre `ASCII`](http://conceptodefinicion.de/ascii/)
-* [Documentación de NPM](https://docs.npmjs.com/)
-
-Estos son algunos tips que te pueden ayudar en la organización y realización de
-tu proyecto, teniendo en cuenta el desarrollo de tus _habilidades blandas_:
-
-* Para comenzar realiza una organización de tu proyecto, ve con qué recursos
-  cuentas y el tiempo que tienes para completarlo.
-* Si hay algo que no sepas pregunta e intenta resolverlo; puedes comenzar con
-  una búsqueda en google, luego consultando a tu squad y por último a tus
-  coaches. Si hay algo que yo no sé, otro me puede ayudar. El aprendizaje es un
-  proceso colaborativo.
-* Una vez que empieces a avanzar pide feedback, tus compañeras pueden tener
-  excelentes ideas o formas de resolver el proyecto que te pueden ayudar.
-* Cuando te topes con un problema, busca alternativas, y para eso consulta
-  diferentes fuentes.
-* Si ya te ves invirtiendo mucho tiempo en detalles debes saber priorizar y
-  seguir con lo más importante, los proyectos tienen tiempo limitado y debes
-  saber administrarlo.
-* Trabaja en equipo, pregunta e intenta completar el proyecto sin rendirte.
-* Prepara tu presentación, si no logro comunicar mis ideas a los demás no se
-  podrá apreciar todo el esfuerzo y trabajo que invertiste.
-
-## Recursos (Q & A)
-
-El código de [sli.do](https://www.sli.do/) para el proyecto 1 :
-
-* Turno am: U414

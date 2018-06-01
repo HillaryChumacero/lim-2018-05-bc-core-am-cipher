@@ -4,79 +4,50 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-      <!-- <div id="principal"> -->
-      <!-- <input type="text" name="nameusu"  placeholder="Ingresa tu nombre aqui..." id="nameusu"><br><br> -->
-      <!-- <input type="button" value="Empezar" id="btnContinuar" >
-      <input type="button" value="Cancelar" id="btnCancelar" > -->
-    <!-- </div> -->
-
-    <div id="root">
-        <h1 class="font-effect-shadow-multiple">CIPHER CESAR - ONLINE</h1>
-        <p>Bienvenido! Aquí encontrarás tu solución para esos mensajes o textos poco discretos...</p>
-        <!-- <p>Hola,<span id="nameHtml">Continuemos...</span>! </p> -->
-        <form action="" name="quiz" id="quiz" >
-            <p>¿Qué deseas realizar?</p>
-            <input type="button" class="button" value="Cifrar" id="btnCifrar" >
-            <input type="button" class="button" value="Descifrar" id="btnDescifrar" > <br> <br>
-          </form>
-    </div>
-   
-    <div id="container-back-encode" name="back-encode" style="display: none" >
-        <h2 class="font-effect-shadow-multiple">CIFRADO</h2>
-        <form action="" name="form-offset" id="form-offset">
-          <p>Eliga cuántos espacios a desplazar desea:</p>
-          <input type="number" class="button" name="offset" id="offset"><br> <br>
-          <!-- <select class="button" name="offset" id="offset"> 
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>  
-          </select>  -->
-        </form>
-        <form action="" name="form-text_cif" id="form-text_cif">
-            <p>Inserta tu texto aquí:</p>
-            <textarea name="text_cif" placeholder="Ingresa tu texto aquí..." id="text_cif" cols="30" rows="10" >
-            </textarea><br>
-            <input type="button" class="button" value="Cifrar Texto" id="btnCifrarTexto">
-            <input type="button" class="button" value="Cancelar" id="btnCancelar" > <br> <br>
-    
-          </form>
+    <header class="header2">
+      <div class="logo">
+          <h1 class="font-effect-shadow-multiple">CAESAR CIPHER - ONLINE</h1>
       </div>
+    </header>
 
-      <div id="container-back-decode" style="display: none">
-        <h2 class="font-effect-shadow-multiple">DESCIFRADO</h2>
-          <form action="" name="form-text_descif" id="form-text_descif">
-              <p>Inserta tu texto a descifrar aquí:</p>
-              <textarea name="text_descif" id="text_descif" cols="30" rows="10" placeholder="Ingresa tu texto aquí...">
-              </textarea><br>
-              <input type="button" class="button" value="Descifrar Texto" id="btnDescifrarTexto" >
-              <input type="button" class="button" value="Cancelar" id="btnCancelar" > <br> <br>
-            </form>
-
-
+    <div id="root" class="root">
+      <div class="text_square">
+        <h3>Bienvenido!</h3>
+        <p>Aquí encontrarás tu solución para esos mensajes o textos poco discretos...</p>
+        <p>¿Tus amigos te envían mensajes que no deseas que sea leído por otras personas?</p>
+        <p>Estás viendo la solución. Dale Click al botón, ¿qué esperas?</p>
       </div>
-      <div id="container-result" style="display: none">
-        <h2 class="font-effect-shadow-multiple">RESULTADO</h2>
-        <form action="" name="form_result" id="form_result">
+      <div class="square-button">
+        <input type="button" class="button" id="btnContinue" value="CIFRA/DESCIFRA">    
+      </div>
+      </div>
+        
+   <!-- SECCION CIFRADO/DESCIFRADO -->
+<div class="container" id="sec_cipher" style="display: none">
+    <form action="" name="quiz" id="quiz" >
+        <h2 class="font-effect-shadow-multiple">CIFRADO/DESCIFRADO</h2> <br> <br>
+        <p>Eliga cuántos espacios a desplazar desea:</p> <br>
+        <input type="number" class="button" id="offset" value="0" min="0"><br> <br>
+        <p>Ingrese el texto que desee cifrar/descrifrar:</p>
+        <input type="text" placeholder="Ingrese su texto aquí..." id="text_cip" class="text"><br>
+        <input type="button" class="button" value="Cifrar" id="btnCifrarTexto">    
+        <input type="button" class="button" value="Descifrar" id="btnDecifrarTexto"> <br> <br> <br>
+        <h2 class="font-effect-shadow-multiple">RESULTADO</h2> <br>
         <p>Terminamos!</p>
-        <p>Tu texto, cifrado es:</p>
-        <textarea name="text_salida" id="text_salida" cols="30" rows="10" >
-        </textarea><br>
-
-        <input type="button" class="button" value="Regresar" id="btnRegresar" >
-        <input type="button" class="button" value="Terminar" id="btnTerminar" > <br> <br>
-      </form>
-
-      </div>
+        <!-- <input type="textArea" id="text_result" class="text"> -->
+        <textarea class="text_result" id="text_result" cols="30" rows="10" disabled></textarea><br>
+        <!-- <p id="text_result"></p><br> -->
+        <input type="button" class="button" value="Copiar Texto" id="btnCopyText">
+        <input type="submit" class="button" value="Terminar" > <br> <br>
+    </form>
+</div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
+<footer>
+  <p>©2018 ®Yamille Chumacero</p>
+</footer>
   </body>
 </html>
