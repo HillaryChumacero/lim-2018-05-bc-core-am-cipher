@@ -1,53 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <header class="header2">
-      <div class="logo">
-          <h1 class="font-effect-shadow-multiple">CAESAR CIPHER - ONLINE</h1>
-      </div>
-    </header>
 
-    <div id="root" class="root">
-      <div class="text_square">
-        <h3>Bienvenido!</h3>
-        <p>Aquí encontrarás tu solución para esos mensajes o textos poco discretos...</p>
-        <p>¿Tus amigos te envían mensajes que no deseas que sea leído por otras personas?</p>
-        <p>Estás viendo la solución. Dale Click al botón, ¿qué esperas?</p>
-      </div>
-      <div class="square-button">
-        <input type="button" class="button" id="btnContinue" value="CIFRA/DESCIFRA">    
-      </div>
-      </div>
-        
-   <!-- SECCION CIFRADO/DESCIFRADO -->
-<div class="container" id="sec_cipher" style="display: none">
-    <form action="" name="quiz" id="quiz" >
-        <h2 class="font-effect-shadow-multiple">CIFRADO/DESCIFRADO</h2> <br> <br>
-        <p>Eliga cuántos espacios a desplazar desea:</p> <br>
-        <input type="number" class="button" id="offset" value="0" min="0"><br> <br>
-        <p>Ingrese el texto que desee cifrar/descrifrar:</p>
-        <input type="text" placeholder="Ingrese su texto aquí..." id="text_cip" class="text"><br>
-        <input type="button" class="button" value="Cifrar" id="btnCifrarTexto">    
-        <input type="button" class="button" value="Descifrar" id="btnDecifrarTexto"> <br> <br> <br>
-        <h2 class="font-effect-shadow-multiple">RESULTADO</h2> <br>
-        <p>Terminamos!</p>
-        <!-- <input type="textArea" id="text_result" class="text"> -->
-        <textarea class="text_result" id="text_result" cols="30" rows="10" disabled></textarea><br>
-        <!-- <p id="text_result"></p><br> -->
-        <input type="button" class="button" value="Copiar Texto" id="btnCopyText">
-        <input type="submit" class="button" value="Terminar" > <br> <br>
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header class="header2">
+    <div class="logo">
+      <h1 class="font-effect-shadow-multiple">CAESAR CIPHER - ONLINE</h1>
+    </div>
+  </header>
+
+  <div id="root" class="root">
+    <div class="text_square">
+      <h3>Bienvenido!</h3>
+      <p>Aquí encontrarás tu solución para esos mensajes o textos poco discretos...</p>
+      <p>¿Tus amigos te envían mensajes que no deseas que sea leído por otras personas?</p>
+      <p>Estás viendo la solución. Dale Click al botón, ¿qué esperas?</p>
+    </div>
+    <div class="square-button">
+      <input type="button" class="button" id="btnContinue" value="CIFRA/DESCIFRA">
+    </div>
+  </div>
+
+  <!-- SECCION CIFRADO/DESCIFRADO -->
+  <div class="container" id="sec_cipher" style="display: none">
+    <form name="quiz" id="quiz">
+      <h2 class="font-effect-shadow-multiple">CIFRADO/DESCIFRADO</h2>
+      <br>
+      <br>
+      <p>Eliga cuántos espacios a desplazar desea:</p>
+      <br>
+      <input type="number" class="button" id="offset" value="0" min="0">
+      <br>
+      <br>
+      <p>Ingrese el texto que desee cifrar/descrifrar:</p>
+      <input type="text" placeholder="Ingrese su texto aquí..." id="text_cip" class="text">
+      <br>
+      <input type="button" class="button" value="Cifrar" id="btnCifrarTexto">
+      <input type="button" class="button" value="Descifrar" id="btnDecifrarTexto">
+      <br>
+      <br>
+      <br>
+      <h2 class="font-effect-shadow-multiple">RESULTADO</h2>
+      <br>
+      <p>Terminamos!</p>
+      <!-- <input type="textArea" id="text_result" class="text"> -->
+      <textarea class="text_result" id="text_result" cols="30" rows="10" disabled></textarea>
+      <br>
+      <!-- <p id="text_result"></p><br> -->
+      <input type="button" class="button" value="Copiar Texto" id="btnCopyText">
+      <input type="submit" class="button" value="Terminar">
+      <br>
+      <br>
     </form>
-</div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-<footer>
-  <p>©2018 ®Yamille Chumacero</p>
-</footer>
-  </body>
+  </div>
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
+  <footer>
+    <p>©2018 ®Yamille Chumacero</p>
+  </footer>
+</body>
+
 </html>
